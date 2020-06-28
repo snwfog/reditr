@@ -12,8 +12,8 @@ class User {
       })
     } else {
       // we got a refresh key, build some scaffolding
-      this.username = ''
-      this.refreshKey = refreshKey
+      this.username    = ''
+      this.refreshKey  = refreshKey
       this.accessToken = ''
     }
   }
@@ -28,9 +28,9 @@ class User {
       reddit
         .getCurrentAccountInfo()
         .then(response => {
-          const me = response
+          const me      = response
           this.username = me.name
-          this.modhash = me.modhash
+          this.modhash  = me.modhash
 
           resolve()
         })
